@@ -21,8 +21,8 @@ from layer import resnet_layers
 
 
 class HCTBase(nn.Module):
-    """Create HCT Model following `[1]`_. 
-    
+    """Create HCT Model following `[1]`_.
+
     The model has `num_conv_stages` convolutional stages followed by
     (5-`num_conv_stages`) Attention-Convolution (AC) stages.
 
@@ -66,6 +66,7 @@ class HCTBase(nn.Module):
         num_conv_stages=3,
         blocks_per_stage=[2, 2, 2, 2, 2],
     ):
+        super().__init__()
         num_chns_per_stage = [16, 32, 64, 128, 256]
 
         conv_block_num_chns = num_chns_per_stage[:num_conv_stages]
@@ -126,7 +127,7 @@ class HCTBase(nn.Module):
         """Initialize HCT model from either pre-trained weights or kaiming normal.
 
         Args:
-            pretrained_weights (str): Path to pre-trained weights saved using torch.save. 
+            pretrained_weights (str): Path to pre-trained weights saved using torch.save.
                 If pretrained_weights=None, kaiming normal is used.
         """
         if pretrained_weights is not None:
@@ -150,11 +151,10 @@ class HCTBase(nn.Module):
                 where bz is the batch-size and chns is the number of input channels.
 
         Returns:
-            Torch.Tensor: HCT output after feedforward. The output tensor shape will be 
+            Torch.Tensor: HCT output after feedforward. The output tensor shape will be
                 [bz, num_classes].
         """
 
-        
         x = self.conv_stages(x)
         if self._num_conv_stages < 5:
             x = self.ac_stages(x)
