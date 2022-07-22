@@ -6,7 +6,7 @@ To model long-range dependencies in high-resolution images, HCT leverages Perfor
 
 ![HCT Architecture](./imgs/archs_outlined.png)
 
-Through self-attention, HCT models long-range spatial dependencies in high-resolution image while remaining relative shallow (22 layers). The next figure shows HCT's effective-receptive-field (ERF) compared to pure CNN. HCT's ERF is less concentrated around the center and spreads _dynamically_ to the breasts' locations without explicit supervision.
+Through self-attention, HCT models long-range spatial dependencies in high-resolution image while remaining a relatively shallow network (22 layers). We evaluate HCT using high-resolution mammograms. The next figure shows HCT's effective-receptive-field (ERF) compared to pure CNN. HCT's ERF is less concentrated around the center and spreads *dynamically* to the breasts' locations without explicit supervision.
 
 ![HCT ERF](./imgs/2022_intro_figure.jpg)
 
