@@ -40,11 +40,12 @@ class ACBlock(nn.Module):
         d_v (int): Value-dimension
         n_head (int): Number of self-attention heads
         performer_attention (nn.Module): A self-attention Performer module with linear complexity.
-        downsample (nn.Module): The downsampling module used within the
-            ResNet-identify path when stride=2.
-        conv2 (nn.Conv2d): Conv layer responsible for both downsampling and increasing the number 
-            of dimensions.
-        bn1 (nn.BatchNorm2d): BatchNorm layer applied before self-attention layer (block input).
+        downsample (nn.Module): The downsampling module used within the ResNet-identify path
+            when stride=2.
+        conv2 (nn.Conv2d): Conv layer responsible for both downsampling the resolution and
+            increasing the number of dimensions.
+        bn1 (nn.BatchNorm2d): BatchNorm layer applied before self-attention layer
+            (The AC-block's input).
         bn1 (nn.BatchNorm2d): BatchNorm layer applied after the self-attention layer 
             (self-attention output).
         relu (nn.ReLU): activation function applied throughout the AC block.
