@@ -1,6 +1,6 @@
 # High-resolution Convolutional Transformer (HCT)
 
-The official implementation of `Deep is a Luxury We Don't Have` accepted by MICCAI 2022.
+The official implementation of [`Deep is a Luxury We Don't Have`](https://arxiv.org/abs/2208.06066) accepted by MICCAI 2022.
 
 To model long-range dependencies in high-resolution images, HCT leverages Performers. Performers are self-attention layers with linear complexity. These efficient self-attention layers are deployed at the late stages of HCT, while early stages leverage vanilla convolutional layers as shown in the next figure. AC denotes Attention-convolution blocks. Please checkout our paper for more details.
 
@@ -26,4 +26,12 @@ Through self-attention, HCT models long-range spatial dependencies in high-resol
 
 ### Citation
 
-Coming Soon.
+### Citation
+```
+@inproceedings{taha2022deep,
+  title={Deep is a Luxury We Don't Have},
+  author={Taha, Ahmed and Vu, Yen Nhi Truong and Mombourquette, Brent and Matthews, Thomas Paul and Su, Jason and Singh, Sadanand},
+  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},
+  year={2022}
+}
+```
