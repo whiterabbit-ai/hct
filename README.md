@@ -27,10 +27,11 @@ Through self-attention, HCT models long-range spatial dependencies in high-resol
 ### Citation
 
 ### Citation
+
 ```
 @inproceedings{taha2022deep,
   title={Deep is a Luxury We Don't Have},
-  author={Taha, Ahmed and Vu, Yen Nhi Truong and Mombourquette, Brent and Matthews, Thomas Paul and Su, Jason and Singh, Sadanand},
+  author={Taha, Ahmed and Truong Vu, Yen Nhi and Mombourquette, Brent and Matthews, Thomas Paul and Su, Jason and Singh, Sadanand},
   booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},
   year={2022}
 }
