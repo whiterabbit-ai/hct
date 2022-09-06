@@ -26,7 +26,7 @@ class HCTBase(nn.Module):
     The model has `num_conv_stages` convolutional stages followed by
     (5-`num_conv_stages`) Attention-Convolution (AC) stages.
 
-    _[1] TODO add arXiv Link
+    _[1] https://arxiv.org/abs/2208.06066
 
     Args:
         num_classes (int, optional): Number of classification logits. Defaults to 2.
